@@ -6,7 +6,7 @@ This repository showcases the integration and usage of Acertinity UI components 
 ## Features
 
 - **Next.js Framework**: Leveraging the power of Next.js for server-side rendering and static site generation.
-- **Acertinity UI Components**: Demonstrating the use of Acertinity's UI components to build a responsive and modern user interface.
+- **Acertinity UI Components**: Demonstrating the use of Acertinitys UI components to build a responsive and modern user interface.
 - **Modular Codebase**: Organized and modular code structure for easy understanding and reuse.
 - **Responsive Design**: Ensuring the application is fully responsive across various devices.
 

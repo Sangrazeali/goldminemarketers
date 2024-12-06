@@ -1,479 +1,141 @@
 "use client";
 import React from "react";
-
-import { motion } from "framer-motion";
-
-import { AuroraBackground } from "../components/ui/aurora-background";
-
-import { LampContainer } from "../components/ui/lamp";
-
-import dynamic from "next/dynamic";
- 
-const World = dynamic(() => import("../components/ui/globe").then((m) => m.World), {
-  ssr: false,
-});
-
+import GlobeMap from "../components/ui/globe-map";
+import ServiceHeroCard from "@/components/service-hero-card";
+import { FaqBanner, Instagram, Tiktok, Youtube } from "@/images";
+import Services from "@/components/Services";
+import Faq from "@/components/globals/faq";
+import Footer from "@/components/globals/footer";
 export default function AuroraBackgroundDemo() {
-  const globeConfig = {
-    pointSize: 4,
-    globeColor: "#062056",
-    showAtmosphere: true,
-    atmosphereColor: "#FFFFFF",
-    atmosphereAltitude: 0.1,
-    emissive: "#062056",
-    emissiveIntensity: 0.1,
-    shininess: 0.9,
-    polygonColor: "rgba(255,255,255,0.7)",
-    ambientLight: "#38bdf8",
-    directionalLeftLight: "#ffffff",
-    directionalTopLight: "#ffffff",
-    pointLight: "#ffffff",
-    arcTime: 1000,
-    arcLength: 0.9,
-    rings: 1,
-    maxRings: 3,
-    initialPosition: { lat: 22.3193, lng: 114.1694 },
-    autoRotate: true,
-    autoRotateSpeed: 0.5,
-  };
-  const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
-  const sampleArcs = [
-    {
-      order: 1,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: -22.9068,
-      endLng: -43.1729,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 1,
-      startLat: 28.6139,
-      startLng: 77.209,
-      endLat: 3.139,
-      endLng: 101.6869,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 1,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: -1.303396,
-      endLng: 36.852443,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 2,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: 35.6762,
-      endLng: 139.6503,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 2,
-      startLat: 51.5072,
-      startLng: -0.1276,
-      endLat: 3.139,
-      endLng: 101.6869,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 2,
-      startLat: -15.785493,
-      startLng: -47.909029,
-      endLat: 36.162809,
-      endLng: -115.119411,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 3,
-      startLat: -33.8688,
-      startLng: 151.2093,
-      endLat: 22.3193,
-      endLng: 114.1694,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 3,
-      startLat: 21.3099,
-      startLng: -157.8581,
-      endLat: 40.7128,
-      endLng: -74.006,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 3,
-      startLat: -6.2088,
-      startLng: 106.8456,
-      endLat: 51.5072,
-      endLng: -0.1276,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 4,
-      startLat: 11.986597,
-      startLng: 8.571831,
-      endLat: -15.595412,
-      endLng: -56.05918,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 4,
-      startLat: -34.6037,
-      startLng: -58.3816,
-      endLat: 22.3193,
-      endLng: 114.1694,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 4,
-      startLat: 51.5072,
-      startLng: -0.1276,
-      endLat: 48.8566,
-      endLng: -2.3522,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 5,
-      startLat: 14.5995,
-      startLng: 120.9842,
-      endLat: 51.5072,
-      endLng: -0.1276,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 5,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: -33.8688,
-      endLng: 151.2093,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 5,
-      startLat: 34.0522,
-      startLng: -118.2437,
-      endLat: 48.8566,
-      endLng: -2.3522,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 6,
-      startLat: -15.432563,
-      startLng: 28.315853,
-      endLat: 1.094136,
-      endLng: -63.34546,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 6,
-      startLat: 37.5665,
-      startLng: 126.978,
-      endLat: 35.6762,
-      endLng: 139.6503,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 6,
-      startLat: 22.3193,
-      startLng: 114.1694,
-      endLat: 51.5072,
-      endLng: -0.1276,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 7,
-      startLat: -19.885592,
-      startLng: -43.951191,
-      endLat: -15.595412,
-      endLng: -56.05918,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 7,
-      startLat: 48.8566,
-      startLng: -2.3522,
-      endLat: 52.52,
-      endLng: 13.405,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 7,
-      startLat: 52.52,
-      startLng: 13.405,
-      endLat: 34.0522,
-      endLng: -118.2437,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 8,
-      startLat: -8.833221,
-      startLng: 13.264837,
-      endLat: -33.936138,
-      endLng: 18.436529,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 8,
-      startLat: 49.2827,
-      startLng: -123.1207,
-      endLat: 52.3676,
-      endLng: 4.9041,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 8,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: 40.7128,
-      endLng: -74.006,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 9,
-      startLat: 51.5072,
-      startLng: -0.1276,
-      endLat: 34.0522,
-      endLng: -118.2437,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 9,
-      startLat: 22.3193,
-      startLng: 114.1694,
-      endLat: -22.9068,
-      endLng: -43.1729,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 9,
-      startLat: 1.3521,
-      startLng: 103.8198,
-      endLat: -34.6037,
-      endLng: -58.3816,
-      arcAlt: 0.5,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 10,
-      startLat: -22.9068,
-      startLng: -43.1729,
-      endLat: 28.6139,
-      endLng: 77.209,
-      arcAlt: 0.7,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 10,
-      startLat: 34.0522,
-      startLng: -118.2437,
-      endLat: 31.2304,
-      endLng: 121.4737,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 10,
-      startLat: -6.2088,
-      startLng: 106.8456,
-      endLat: 52.3676,
-      endLng: 4.9041,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 11,
-      startLat: 41.9028,
-      startLng: 12.4964,
-      endLat: 34.0522,
-      endLng: -118.2437,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 11,
-      startLat: -6.2088,
-      startLng: 106.8456,
-      endLat: 31.2304,
-      endLng: 121.4737,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 11,
-      startLat: 22.3193,
-      startLng: 114.1694,
-      endLat: 1.3521,
-      endLng: 103.8198,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 12,
-      startLat: 34.0522,
-      startLng: -118.2437,
-      endLat: 37.7749,
-      endLng: -122.4194,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 12,
-      startLat: 35.6762,
-      startLng: 139.6503,
-      endLat: 22.3193,
-      endLng: 114.1694,
-      arcAlt: 0.2,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 12,
-      startLat: 22.3193,
-      startLng: 114.1694,
-      endLat: 34.0522,
-      endLng: -118.2437,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 13,
-      startLat: 52.52,
-      startLng: 13.405,
-      endLat: 22.3193,
-      endLng: 114.1694,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 13,
-      startLat: 11.986597,
-      startLng: 8.571831,
-      endLat: 35.6762,
-      endLng: 139.6503,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 13,
-      startLat: -22.9068,
-      startLng: -43.1729,
-      endLat: -34.6037,
-      endLng: -58.3816,
-      arcAlt: 0.1,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-    {
-      order: 14,
-      startLat: -33.936138,
-      startLng: 18.436529,
-      endLat: 21.395643,
-      endLng: 39.883798,
-      arcAlt: 0.3,
-      color: colors[Math.floor(Math.random() * (colors.length - 1))],
-    },
-  ];
- 
+
+
   return (
     <>
-
-
-    <AuroraBackground>
-      <motion.div
-        initial={{ opacity: 0.0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
-      >
-        <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
-          Vijay Singh
+      <div className="h-screen w-full">
+        <div className="div-container py-10 md:py-20">
+          <div className="grid gird-cols-1 md:grid-cols-2  items-center gap-10">
+            <div className="space-y-4">
+              <h1 className="inline-block py-4 text-4xl font-bold leading-none tracking-[-3px]  md:text-[60px] lg:text-[65px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">
+                Creativity & Brand Experience & Reimagined!
+              </h1>
+              <p className="text-sm mt-7 font-medium leading-tight md:text-base maxw:text-base maxw:leading-6">
+                Integrated Creative, Branding,
+                Marketing and Advertising Agency providing services around the globe.
+              </p>
+            </div>
+            <div className="hidden sm:flex">
+              <GlobeMap />
+            </div>
+          </div>
         </div>
-        <div className="font-extralight text-base md:text-4xl dark:text-neutral-200 py-4">
-          Check out the Globe down below.
+
+        <div className="">
+          <Services />
         </div>
-        <button className="bg-black dark:bg-white rounded-full w-fit text-white dark:text-black px-4 py-2">
-          Debug now
-        </button>
-      </motion.div>
-    </AuroraBackground>
-
-<div className="flex flex-row items-center justify-center py-20 h-screen md:h-auto dark:bg-black bg-white relative w-full">
-<div className="max-w-7xl mx-auto w-full relative overflow-hidden h-full md:h-[40rem] px-4">
-  <motion.div
-    initial={{
-      opacity: 0,
-      y: 20,
-    }}
-    animate={{
-      opacity: 1,
-      y: 0,
-    }}
-    transition={{
-      duration: 1,
-    }}
-    className="div"
-  >
-    <h2 className="text-center text-xl md:text-4xl font-bold text-black dark:text-white">
-      We sell soap worldwide
-    </h2>
-    <p className="text-center text-base md:text-lg font-normal text-neutral-700 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-      This globe is interactive and customizable. Have fun with it, and
-      don&apos;t forget to share it. :)
-    </p>
-  </motion.div>
-  <div className="absolute w-full bottom-0 inset-x-0 h-40 bg-gradient-to-b pointer-events-none select-none from-transparent dark:to-black to-white z-40" />
-  <div className="absolute w-full -bottom-20 h-72 md:h-full z-10">
-    <World data={sampleArcs} globeConfig={globeConfig} />;
-  </div>
-</div>
-</div>
 
 
-<LampContainer>
-      <motion.h1
-        initial={{ opacity: 0.5, y: 100 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.8,
-          ease: "easeInOut",
-        }}
-        className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-      >
-        Build lamps <br /> the right way
-      </motion.h1>
-    </LampContainer>
-</>
+        {/* <div className="py-20 div-container border-b">
+          <h1 className="inline-block py-4 text-4xl mb-10 font-bold leading-none tracking-[-3px] md:text-[35px] lg:text-[40px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">
+            What We Do ?
+          </h1>
+          <div className="grid grid-cols-3 gap-5">
+            <ServiceHeroCard imageSrc={Youtube} title={"Youtube"} description={"Unlock earnings by sharing ads on your videos, offering memberships, and engaging with super chats during live streams to maximize revenue potential."} />
+            <ServiceHeroCard imageSrc={Tiktok} title={"TikTok"} description={"Grow your income by leveraging the TikTok Creator Fund, brand partnerships, and live stream gifts to turn your content into profit."} />
+            <ServiceHeroCard imageSrc={Instagram} title={"Instagram"} description={"Earn through sponsored posts, affiliate marketing, and Instagrams native shop features to promote products and generate revenue."} />
+          </div>
+        </div> */}
+        <section className="div-container py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            <h2 className="flex flex-col  text-4xl text-black md:space-y-3 md:text-[30px] maxw:text-mobh mb-20"><span className="font-bold">What We Do ?</span></h2>
+            <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 xl:space-y-20 2xl:p-12">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Authentic <br className="-lg:hidden" /> Storytelling</p>
+              <p className="text-base lg:text-sm xl:text-base">Tell your clients which were your first steps and failures in this business.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-2 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Optimized<br className="-lg:hidden" />Ads</p>
+              <p className="text-base lg:text-sm xl:text-base">Optimize every word on your page for increasing the sales and reach the top of Google searching.</p>
+            </div>
+            <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 xl:space-y-20 2xl:p-12">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Community <br className="-lg:hidden" /> Engagement</p>
+              <p className="text-base lg:text-sm xl:text-base">Develop business with similar companies or partners.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-1 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Fostering <br className="-lg:hidden" /> Growth</p>
+              <p className="text-base lg:text-sm xl:text-base">The accent on social media activities increases the number of your clients.</p>
+            </div>
+            <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-2 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12 -lg:border-t-0">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Strategy &  <br className="-lg:hidden" /> visual design</p>
+              <p className="text-base lg:text-sm xl:text-base">It is possible to see the future result with the prognosticate ground plan.</p>
+            </div>
+            <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 lg:border-r-1 xl:space-y-20 2xl:p-12 -lg:border-t-1">
+              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Targeted <br className="-lg:hidden" />Content</p>
+              <p className="text-base lg:text-sm xl:text-base">The targeting content helps you to push ahead less popular categories of goods.</p>
+            </div>
+          </div>
+        </section>
+        <div className="div-container grid content-center py-10 text-left md:min-h-screen md:py-20">
+          <p className="gmm-rainbow-text mb-8 text-[21px] font-bold">Why Choose Gold Mine Marketers?</p>
+          <h3 className="text-2xl font-medium !leading-none tracking-[-1px] sm:text-4xl sm:font-bold md:w-8/12 md:text-[45px] xl:text-[65px]">
+            At Gold Mine Marketers, were not just another advertising agency  were your trusted partner in creating iconic brands that resonate in the dynamic market.
+          </h3>
+          <p className="mb-8 mt-5 text-[21px] font-bold">Unlock Success with Gold Mine Marketers—Your Trusted Advertising Partner.</p>
+          <p className="my-6 md:w-7/12">
+            With over 16 years of experience, Gold Mine Marketers has established a reputation for transparency and excellence. Our philosophy is simple: never compromise on quality. We design innovative strategies and combine cutting-edge data analysis with impactful digital campaigns. Our wide array of services, including marketing and advertising, branding and positioning, digital marketing, and web development, are tailor-made to suit the diverse needs of businesses in the digital age.
+          </p>
+
+          <div className="pointer-events-auto my-16 flex w-fit items-center space-x-5 maxw:space-x-2">
+            <a href="/about" className="bg-yellow-500 group relative inline-flex items-center overflow-hidden p-1 text-gray-900 border border-yellow-500 h-11 rounded-full bg-transparent px-6 py-1 font-medium group-hover:text-white group-hover:!bg-white md:px-12 md:py-2 maxw400:min-w-[47%] maxw400:px-[1.1rem] maxw400:text-center mmax1024:h-[52px] mmax1024:py-4 mmax1024:text-[16px]">
+              <span className="relative whitespace-nowrap text-sm mmax1024:text-[16px]">More About Gold Mine Marketers</span>
+            </a>
+
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-px border-t border-b border-gray-100 bg-gray-200 text-center md:grid-cols-4 max-w-full border-0 mmax1024:grid-cols-2">
+          <div className="flex h-64 flex-col justify-center space-y-1 bg-white max-w-full  gap-x-6 px-[10%] py-7">
+            <span className="flex scale-110 items-center justify-center text-4xl font-semibold sm:text-7xl sm:tracking-[-4px]">
+              <span className="gmm-rainbow-text inline-block">
+                <span>20</span><span>+</span>
+              </span>
+            </span>
+            <span className="text-sm font-semibold sm:text-[21px]">In-house Team</span>
+          </div>
+
+          <div className="flex h-64 flex-col justify-center space-y-1 bg-white max-w-full  gap-x-6 px-[10%] py-7">
+            <span className="flex scale-110 items-center justify-center text-4xl font-semibold sm:text-7xl sm:tracking-[-4px]">
+              <span className="gmm-rainbow-text inline-block">
+                <span>10</span><span>+</span>
+              </span>
+            </span>
+            <span className="text-sm font-semibold sm:text-[21px]">Years of Experience</span>
+          </div>
+
+          <div className="flex h-64 flex-col justify-center space-y-1 bg-white max-w-full  gap-x-6 px-[10%] py-7">
+            <span className="flex scale-110 items-center justify-center text-4xl font-semibold sm:text-7xl sm:tracking-[-4px]">
+              <span className="gmm-rainbow-text inline-block">
+                <span>4</span><span>+</span>
+              </span>
+            </span>
+            <span className="text-sm font-semibold sm:text-[21px]">Global Countries</span>
+          </div>
+
+          <div className="flex h-64 flex-col justify-center space-y-1 bg-white max-w-full  gap-x-6 px-[10%] py-7">
+            <span className="flex scale-110 items-center justify-center text-4xl font-semibold sm:text-7xl sm:tracking-[-4px]">
+              <span className="gmm-rainbow-text inline-block pr-1">
+                <span data-counter-time="500">150</span><span>+</span>
+              </span>
+            </span>
+            <span className="text-sm font-semibold sm:text-[21px]">Clients</span>
+          </div>
+        </div>
+
+        <Footer />
+      </div>
+    </>
   );
 }
 

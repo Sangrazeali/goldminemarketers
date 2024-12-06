@@ -20,6 +20,15 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      extend: {
+        colors: {
+          gold: {
+            300: '#FFD700',  // Light gold
+            500: '#FFBF00',  // Medium gold
+            600: '#FFAA00',  // Dark gold
+          },
+        },
+      },
     },
   },
   plugins: [addVariablesForColors],
