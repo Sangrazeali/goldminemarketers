@@ -1,10 +1,7 @@
 "use client";
 import React from "react";
 import GlobeMap from "../components/ui/globe-map";
-import ServiceHeroCard from "@/components/service-hero-card";
-import { FaqBanner, Instagram, Tiktok, Youtube } from "@/images";
 import Services from "@/components/Services";
-import Faq from "@/components/globals/faq";
 import Footer from "@/components/globals/footer";
 export default function AuroraBackgroundDemo() {
 
@@ -33,17 +30,6 @@ export default function AuroraBackgroundDemo() {
           <Services />
         </div>
 
-
-        {/* <div className="py-20 div-container border-b">
-          <h1 className="inline-block py-4 text-4xl mb-10 font-bold leading-none tracking-[-3px] md:text-[35px] lg:text-[40px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">
-            What We Do ?
-          </h1>
-          <div className="grid grid-cols-3 gap-5">
-            <ServiceHeroCard imageSrc={Youtube} title={"Youtube"} description={"Unlock earnings by sharing ads on your videos, offering memberships, and engaging with super chats during live streams to maximize revenue potential."} />
-            <ServiceHeroCard imageSrc={Tiktok} title={"TikTok"} description={"Grow your income by leveraging the TikTok Creator Fund, brand partnerships, and live stream gifts to turn your content into profit."} />
-            <ServiceHeroCard imageSrc={Instagram} title={"Instagram"} description={"Earn through sponsored posts, affiliate marketing, and Instagrams native shop features to promote products and generate revenue."} />
-          </div>
-        </div> */}
         <section className="div-container py-20">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <h2 className="flex flex-col  text-4xl text-black md:space-y-3 md:text-[30px] maxw:text-mobh mb-20"><span className="font-bold">What We Do ?</span></h2>

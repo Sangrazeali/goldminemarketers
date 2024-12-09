@@ -3,8 +3,7 @@ import Faq from "@/components/globals/faq"
 import Footer from "@/components/globals/footer"
 import ServiceHeroCard from "@/components/service-hero-card"
 import { TeamCard } from "@/components/team-card"
-import { MacbookScroll } from "@/components/ui/mackbook-scroll"
-import { AboutBanner, Basit, FaqBanner, Instagram, Mahad, Muhammad, Sunny, Tiktok, Youtube } from "@/images"
+import {  Basit, FaqBanner, Instagram, Mahad, Muhammad, Sunny, Tiktok, Youtube } from "@/images"
 import React from "react"
 
 function page() {
