@@ -34,31 +34,31 @@ export default function AuroraBackgroundDemo() {
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <h2 className="flex flex-col  text-4xl text-black md:space-y-3 md:text-[30px] maxw:text-mobh mb-20"><span className="font-bold">What We Do ?</span></h2>
             <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 xl:space-y-20 2xl:p-12">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Authentic <br className="-lg:hidden" /> Storytelling</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Authentic <br className="-lg:hidden" /> Storytelling</h3>
               <p className="text-base lg:text-sm xl:text-base">Tell your clients which were your first steps and failures in this business.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-2 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Optimized<br className="-lg:hidden" />Ads</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Optimized<br className="-lg:hidden" />Ads</h3>
               <p className="text-base lg:text-sm xl:text-base">Optimize every word on your page for increasing the sales and reach the top of Google searching.</p>
             </div>
             <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 xl:space-y-20 2xl:p-12">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Community <br className="-lg:hidden" /> Engagement</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Community <br className="-lg:hidden" /> Engagement</h3>
               <p className="text-base lg:text-sm xl:text-base">Develop business with similar companies or partners.</p>
             </div>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-1 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Fostering <br className="-lg:hidden" /> Growth</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Fostering <br className="-lg:hidden" /> Growth</h3>
               <p className="text-base lg:text-sm xl:text-base">The accent on social media activities increases the number of your clients.</p>
             </div>
             <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-2 lg:space-y-12 lg:border-r-0 xl:space-y-20 2xl:p-12 -lg:border-t-0">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Strategy &  <br className="-lg:hidden" /> visual design</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Strategy &  <br className="-lg:hidden" /> visual design</h3>
               <p className="text-base lg:text-sm xl:text-base">It is possible to see the future result with the prognosticate ground plan.</p>
             </div>
             <div className="grid content-start space-y-4 border border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 lg:border-r-1 xl:space-y-20 2xl:p-12 -lg:border-t-1">
-              <p className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Targeted <br className="-lg:hidden" />Content</p>
+              <h3 className="text-2xl font-bold leading-none sm:text-3xl lg:text-2xl xl:text-4xl ">Targeted <br className="-lg:hidden" />Content</h3>
               <p className="text-base lg:text-sm xl:text-base">The targeting content helps you to push ahead less popular categories of goods.</p>
             </div>
           </div>

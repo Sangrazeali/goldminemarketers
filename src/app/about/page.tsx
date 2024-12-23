@@ -10,7 +10,7 @@ function page() {
     return (
         <>
             <div className="div-container py-16 md:py-32">
-                <h1 className="text-3xl font-bold tracking-[-1px] sm:text-5xl md:text-[80px] md:tracking-[-3px] maxw:text-mob33 maxw:leading-[1.30] maxw400:text-mob8vw mmax1024:text-7xl mmax1024:leading-[1.1]"><span className="block">We are a Creative </span><span className="gmm-rainbow-text block whitespace-nowrap">Consumer-Experience</span><span className="gmm-rainbow-text block pb-4"> Agency.</span></h1>
+                <h1 className="text-3xl font-bold tracking-[-1px] sm:text-5xl md:text-[80px] md:tracking-[-3px] maxw:text-mob33 maxw:leading-[1.30] maxw400:text-mob8vw mmax1024:text-7xl mmax1024:leading-[1.1]">We are a Creative <br /> Consumer-Experience <br /> Agency.</h1>
                 <p className="text-sm mt-7 font-medium leading-tight md:text-base maxw:text-base maxw:leading-6">
                     We design innovative strategies that connect with audiences, elevate brands, and deliver impactful results. <br /> Lets create something extraordinary together!
                 </p>
