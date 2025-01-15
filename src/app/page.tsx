@@ -9,10 +9,10 @@ export default function AuroraBackgroundDemo() {
   return (
     <>
       <div className="h-screen w-full">
-        <div className="div-container py-10 md:py-20">
-          <div className="grid gird-cols-1 md:grid-cols-2  items-center gap-10">
+        <div className="div-container py-10">
+          <div className="grid gird-cols-1 md:grid-cols-2 text-black items-center gap-10">
             <div className="space-y-4">
-              <h1 className="inline-block py-4 text-4xl font-bold leading-none tracking-[-3px]  md:text-[60px] lg:text-[65px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">
+              <h1 className="inline-block py-1 text-4xl font-bold leading-none tracking-[-3px]  md:text-[60px] lg:text-[65px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">
                 Creativity & Brand Experience & Reimagined!
               </h1>
               <p className="text-sm mt-7 font-medium leading-tight md:text-base maxw:text-base maxw:leading-6">
@@ -30,7 +30,7 @@ export default function AuroraBackgroundDemo() {
           <Services />
         </div>
 
-        <section className="div-container py-20">
+        <section className="div-container py-20 text-black">
           <div className="grid grid-cols-1 lg:grid-cols-3">
             <h2 className="flex flex-col  text-4xl text-black md:space-y-3 md:text-[30px] maxw:text-mobh mb-20"><span className="font-bold">What We Do ?</span></h2>
             <div className="grid content-start space-y-4 border border-b-0 border-black/20 p-8 sm:p-10 lg:col-start-3 lg:space-y-12 xl:space-y-20 2xl:p-12">
@@ -63,10 +63,10 @@ export default function AuroraBackgroundDemo() {
             </div>
           </div>
         </section>
-        <div className="div-container grid content-center py-10 text-left md:min-h-screen md:py-20">
+        <div className="div-container text-black grid content-center py-10 text-left md:min-h-screen md:py-20">
           <p className="gmm-rainbow-text mb-8 text-[21px] font-bold">Why Choose Gold Mine Marketers?</p>
           <h3 className="text-2xl font-medium !leading-none tracking-[-1px] sm:text-4xl sm:font-bold md:w-8/12 md:text-[45px] xl:text-[65px]">
-            At Gold Mine Marketers, were not just another advertising agency  were your trusted partner in creating iconic brands that resonate in the dynamic market.
+            At Gold Mine Marketers, we are not just another advertising agency  we are your trusted partner in creating iconic brands that resonate in the dynamic market.
           </h3>
           <p className="mb-8 mt-5 text-[21px] font-bold">Unlock Success with Gold Mine Marketers—Your Trusted Advertising Partner.</p>
           <p className="my-6 md:w-7/12">

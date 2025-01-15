@@ -43,11 +43,10 @@ const Faq = () => {
   };
 
   return (
-    <div className="div-container flex flex-wrap items-start space-y-10 md:flex-nowrap md:space-x-0">
-      <div className="w-full">
-      </div>
-      <div className="w-full">
-      <h3 className="text-6xl font-bold leading-none text-white mb-10">FAQ</h3>
+    <div className="div-container flex flex-wrap items-start space-y-10 md:flex-nowrap md:space-x-0 border-t">
+     
+      <div className="w-full grid grid-cols-2 py-16">
+      <h3 className="text-6xl font-bold leading-none text-black mb-10">Frequently Asked Questions</h3>
         <div className="-mx-4 flex flex-wrap">
           {faqs.map((faq, index) => (
             <div key={index} className="w-full px-4">
@@ -57,7 +56,7 @@ const Faq = () => {
                   aria-expanded={expandedIndex === index ? "true" : "false"}
                   onClick={() => toggleFAQ(index)}
                 >
-                  <h4 className="w-full text-lg font-semibold text-white">{faq.question}</h4>
+                  <h4 className="w-full text-lg font-semibold text-black">{faq.question}</h4>
                   <span className="mr-3 flex h-10 w-full max-w-[40px] items-center justify-center rounded-lg text-gray-500 sm:mr-5">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +77,7 @@ const Faq = () => {
               </div>
               {expandedIndex === index && (
                 <div className="pb-5 leading-relaxed">
-                  <div className="space-y-2 leading-relaxed text-white/70">{faq.answer}</div>
+                  <div className="space-y-2 leading-relaxed text-black/70">{faq.answer}</div>
                 </div>
               )}
             </div>

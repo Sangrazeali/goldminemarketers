@@ -3,14 +3,14 @@ import Faq from "@/components/globals/faq"
 import Footer from "@/components/globals/footer"
 import ServiceHeroCard from "@/components/service-hero-card"
 import { TeamCard } from "@/components/team-card"
-import {  Basit, FaqBanner, Instagram, Mahad, Muhammad, Sunny, Tiktok, Youtube } from "@/images"
+import { Azan, Basit, FaqBanner, Instagram, Mahad, Muhammad, Sunny, Tiktok, Youtube } from "@/images"
 import React from "react"
 
 function page() {
     return (
         <>
-            <div className="div-container py-16 md:py-32">
-                <h1 className="text-3xl font-bold tracking-[-1px] sm:text-5xl md:text-[80px] md:tracking-[-3px] maxw:text-mob33 maxw:leading-[1.30] maxw400:text-mob8vw mmax1024:text-7xl mmax1024:leading-[1.1]">We are a Creative <br /> Consumer-Experience <br /> Agency.</h1>
+            <div className="div-container text-black py-16 md:py-32">
+                <h1 className="inline-block py-1 text-4xl font-bold leading-none tracking-[-3px]  md:text-[60px] lg:text-[65px] maxw:text-mob33 maxw:leading-tight maxw:tracking-[-1.5px] maxw400:text-mob9vw">We are a Creative <br /> Consumer-Experience <br /> Agency.</h1>
                 <p className="text-sm mt-7 font-medium leading-tight md:text-base maxw:text-base maxw:leading-6">
                     We design innovative strategies that connect with audiences, elevate brands, and deliver impactful results. <br /> Lets create something extraordinary together!
                 </p>
@@ -25,20 +25,19 @@ function page() {
                     </div>
                 </div>
             </div>
-          
+
             <section className="bg-white py-12 md:pb-20 md:pt-16"><div className="div-container "><div className="flex flex-wrap md:flex-nowrap"><div className="mt-12 flex w-full items-center"><div className="space-y-5 md:space-y-12"><div className="flex flex-col md:space-y-8"><span data-aos="fade-up" className="text-4xl font-extralight tracking-[-1px] text-black md:text-[115px] md:tracking-[-10px] maxw:text-[40px] maxw400:text-mob10vw mmax1024:text-[90px]">From the</span><span data-aos="fade-up" className="gmm-rainbow-text block text-4xl font-bold leading-none tracking-[-1px] text-black md:text-[115px] md:tracking-[-7px] maxw:text-[40px] maxw400:text-mob10vw mmax1024:text-[90px]">UAE to the world</span></div><span data-aos="fade-up" className="ml-auto block w-full text-sm font-medium leading-normal text-gray-800 md:w-1/2 md:text-base maxw:text-base">Gold Mine Marketers has collaborated with some of the most prominent global brands, establishing enduring partnerships built on trust, creativity, and innovation. Over 10 years, we have successfully designed, implemented, and launched impactful projects across diverse industries. Our strategic alliances and exclusive marketing tools have propelled us to become a leading creative agency, operating across the UAE, USA, Saudi Arabia, Qatar, and beyond. Our commitment to delivering tailored solutions has solidified our position as a trusted partner, driving growth and innovation in the MENA region and worldwide..</span></div></div></div></div></section>
             <div className="div-container py-20">
                 <h2 className="flex flex-col  text-4xl text-black md:space-y-3 md:text-[30px] maxw:text-mobh mb-20"><span className="font-bold">Meet Our Team of Professionals</span></h2>
                 <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
                     <TeamCard imgUrl={Muhammad?.default?.src} name={"M. Usama Iqbal"} designation={"Founder"} />
-                    <TeamCard imgUrl={Sunny?.default?.src} name={"Sangraze Ali"} designation={"Co Founder"} />
-                    <TeamCard imgUrl={Mahad?.default?.src} name={"Mahad Ali Khan"} designation={"Vice President"} />
-                    <TeamCard imgUrl={Basit?.default?.src} name={"Basit"} designation={"Managing Director"} />
+                    <TeamCard imgUrl={Mahad?.default?.src} name={"Mahad Ali Khan"} designation={"Co Founder"} />
+                    <TeamCard imgUrl={Sunny?.default?.src} name={"Sangraze Ali"} designation={"Vice President"} />
+                    <TeamCard imgUrl={Basit?.default?.src} name={"Abdul Basit Majid"} designation={"Managing Director"} />
+                    <TeamCard imgUrl={Azan?.default?.src} name={"Muhammad Azan"} designation={"Branch Manager"} />
                 </div>
             </div>
-            <div className="bg-cover bg-no-repeat bg-bottom py-20" style={{ backgroundImage: `url(${FaqBanner.default.src})`, filter: "hue-rotate(30deg) saturate(1.5) contrast(1.1)" }}>
-                <Faq />
-            </div>
+            <Faq />
             <Footer />
 
         </>
