@@ -95,7 +95,7 @@ const DigitalDropshipping = () => {
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">Get Started with Digital Drop-shipping</h2>
           <p className="text-lg mb-6">
-            Transform your business with our Digital Drop-shipping services. Whether you're an experienced entrepreneur or just starting, we provide the tools, products, and support you need to succeed.
+            Transform your business with our Digital Drop-shipping services. Whether youre an experienced entrepreneur or just starting, we provide the tools, products, and support you need to succeed.
           </p>
           <a
             className="bg-black text-white font-semibold py-3 px-6 rounded-full hover:bg-gray-900 transition shadow-lg"
@@ -113,7 +113,7 @@ const DigitalDropshipping = () => {
               Request More Information
             </h1>
             <p className="text-white/70">
-              For inquiries and details, connect with us on WhatsApp today! Let's work together to
+              For inquiries and details, connect with us on WhatsApp today! Lets work together to
               achieve your goals.
             </p>
             <a

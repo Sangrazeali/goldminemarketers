@@ -45,7 +45,7 @@ const Faq = () => {
   return (
     <div className="div-container flex flex-wrap items-start space-y-10 md:flex-nowrap md:space-x-0 border-t">
      
-      <div className="w-full grid grid-cols-2 py-16">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 py-16">
       <h3 className="text-6xl font-bold leading-none text-black mb-10">Frequently Asked Questions</h3>
         <div className="-mx-4 flex flex-wrap">
           {faqs.map((faq, index) => (

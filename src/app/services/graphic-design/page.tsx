@@ -33,10 +33,10 @@ const GraphicDesigningServices = () => {
                             Bring Your Vision to Life
                         </h2>
                         <p className="text-gray-600 text-lg">
-                            In today's visually driven world, impactful design is at the heart
+                            In todays visually driven world, impactful design is at the heart
                             of every successful brand. At Goldmine Marketers, we specialize in
                             creating stunning graphic designs that not only capture attention
-                            but also tell your brand's story in a compelling way.
+                            but also tell your brands story in a compelling way.
                         </p>
                     </div>
                 </section>
@@ -70,7 +70,7 @@ const GraphicDesigningServices = () => {
                         {
                             title: "Logo Design",
                             description:
-                                "Create a distinctive logo that represents your brand's personality and values.",
+                                "Create a distinctive logo that represents your brands personality and values.",
                         },
                         {
                             title: "Brand Identity Design",

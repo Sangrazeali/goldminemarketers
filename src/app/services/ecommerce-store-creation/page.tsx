@@ -28,7 +28,7 @@ const ECommerceStoreCreation = () => {
                 <section className="bg-white py-16 border-b">
                     <div className="mx-auto px-6 text-center">
                         <p className="text-gray-600 text-lg">
-                            Whether you're starting a brand-new online business or expanding an existing one, we will create a store tailored to your needs.
+                            Whether youre starting a brand-new online business or expanding an existing one, we will create a store tailored to your needs.
                         </p>
                     </div>
                 </section>
@@ -37,7 +37,7 @@ const ECommerceStoreCreation = () => {
                     <div className="max-w-4xl mx-auto px-6">
                         <h2 className="text-3xl font-bold mb-4">Why Choose Us?</h2>
                         <p className="text-lg mb-6">
-                            We know the e-commerce world inside and out. Whether you need a sleek Shopify store, a TikTok Shop to reach younger audiences, or integration with platforms like Amazon and Etsy, we'll make sure your business is set up for success. From design to functionality, we create stores that are intuitive, engaging, and built to convert.
+                            We know the e-commerce world inside and out. Whether you need a sleek Shopify store, a TikTok Shop to reach younger audiences, or integration with platforms like Amazon and Etsy, well make sure your business is set up for success. From design to functionality, we create stores that are intuitive, engaging, and built to convert.
                         </p>
                     </div>
                 </section>
@@ -71,7 +71,7 @@ const ECommerceStoreCreation = () => {
                         </li>
                         <li className="grid border-b border-black/20 py-12 lg:grid-cols-2 lg:space-y-0">
                             <p className="grid content-center text-base font-medium sm:text-lg lg:text-xl lg:font-semibold">Scalable Solutions</p>
-                            <h3 className="text-2xl font-bold sm:text-3xl lg:text-4xl">Whether you're launching with a handful of products or a full catalog, our stores are built to grow with your business.</h3>
+                            <h3 className="text-2xl font-bold sm:text-3xl lg:text-4xl">Whether youre launching with a handful of products or a full catalog, our stores are built to grow with your business.</h3>
                         </li>
                         <li className="grid border-b border-black/20 py-12 lg:grid-cols-2 lg:space-y-0">
                             <p className="grid content-center text-base font-medium sm:text-lg lg:text-xl lg:font-semibold">SEO &amp; Marketing Ready</p>
@@ -85,7 +85,7 @@ const ECommerceStoreCreation = () => {
                 <div className="max-w-4xl mx-auto px-6">
                     <h2 className="text-3xl font-bold mb-4">Get Started Today!</h2>
                     <p className="text-lg mb-6">
-                        Let's help you bring your products to a global audience with a store that stands out.
+                        Lets help you bring your products to a global audience with a store that stands out.
                     </p>
                     <a
                         className="bg-black text-white font-semibold py-3 px-6 rounded-full hover:bg-gray-900 transition shadow-lg"
